@@ -1,0 +1,29 @@
+run.config:
+  engine: php
+  engine.config:
+    runtime: php-7.2
+    extensions:
+      - gd
+      - mysqli
+      - curl
+      - zlib
+      - ctype
+      - bcmath
+      - exif
+      - fileinfo
+      - imagick
+      - mcrypt
+
+web.wp:
+  start:
+    php: start-php
+    apache: start-apache
+  network_dirs:
+    data.storage:
+      - wp-content/uploads/
+
+data.db:
+  image: nanobox/mysql
+
+data.storage:
+  image: nanobox/unfs
