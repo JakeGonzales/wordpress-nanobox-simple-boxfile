@@ -13,6 +13,10 @@ run.config:
       - fileinfo
       - imagick
       - mcrypt
+      - dom
+      - mbstring
+      - xml
+      - zip
 
 web.wp:
   start:
